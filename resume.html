@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+  .profile {
+    border-radius: 50%;
+	
+	border: 4px solid #455A64;
+}
+
+	.txt-highlight {
+		text-align: center;
+	}
+	
+	 nav .brand-logo {
+	color: #CFD8DC;
+	
+	}
+	p {
+	color: #455A64;
+	}
+	h5 {
+	color: #607D8B;
+	text-align: center;
+	}
+	h6 {
+	
+	color:#455A64;
+	}
+	body {
+	background-color: #CFD8DC;
+	}
+	.page-footer, .nav-wrapper {
+	background-color: #455A64;
+	}
+	
+	.card {
+		margin:20px;
+		
+	
+	}
+	.card .card-content {
+		
+		padding: 10px;
+	
+	}
+	b {
+	color: #607D8B;
+	
+	}
+	
+	
+	span.txt-left { float:left; }
+	
+	span.txt-right { float:right; }
+
+	.experience, .education, .training {
+		height:70px;
+	
+	}
+
+	ul.circle, ul.circle > li { list-style-type: circle; }
+	.card .card-reveal .card-title {
+		font-size:large;
+		margin-bottom: 0px;
+	}
+	.card .card-content .card-title {
+		font-size:large;
+		margin-bottom: 0px;}
+		
+  </style>
+</head>
+<body>
+  <nav>
+         <div class="nav-wrapper">
+		 <span style="padding:15px">
+		  <img class="profile" src="images/profile.jpg" height="150" width="150" alt="profile picture"> </span>
+	
+            <a href="#!" class="brand-logo title">Caroline Fuhrer </a>
+			<a href="CV_Caroline_Fuhrer.pdf" target="_blank">Download CV</a>
+         </div>
+      </nav>
+  
+
+  <div class="container">
+    <div class="section">
+
+   
+	<div class="row">
+	
+		<h5>SUMMARY</h5>
+			<div class="card">
+				<div class="card-content txt-highlight">
+			
+						<p>Dedicated information management and GIS specialist, holding a degree in epidemiology with 5+ years’ experience in public health and health emergencies, and a profound understanding of the UN system and the humanitarian sector. Demonstrated experience in web development and passion for data automation and visualization.</p>
+				</div>
+		</div>
+	</div>
+	<div class="row">	
+		<h5>SKILLS</h5>
+			<div class="card">
+				<div class="card-content txt-highlight">
+		<p><b>Data Collection:</b> LimeSurvey, ODK, Kobo, Esri Survey123 <b>Database Management:</b> MS Access, SQL
+		<b>Data Analysis & Visualization:</b> MS Excel, Operations Dashboard for ArcGIS, PowerBI, Python, R, Visual Basic <b>GIS and Mapping:</b> Esri ArcGIS Desktop & Online, QGIS <b>Web Development:</b> CSS, HTML, JavaScript; <b>Languages:</b> English (proficient), French (advanced), German (mother tongue)
+		</p>
+				</div>
+		</div>
+				</div>
+				
+	<div class="row">
+		<h5>EXPERIENCE</h5>
+		<div class="card">
+				<div id="exp1" class="card-content experience">
+					<span class="card-title activator grey-text text-darken-4"><b>Health Sector Analyst</b>
+					  <i class="material-icons right" onclick="expand('exp1');">more_vert</i>
+					</span>
+					<div>
+						<span class="txt-left">03/2018 – ongoing</span>
+						<span class="txt-right">iMMAP ─ Ethiopia</span>
+						
+					</div>
+				</div>
+				<div class="card-reveal">
+				<span class="card-title grey-text text-darken-4"><b>Health Sector Analyst</b>
+				<i class="material-icons right"onclick="collapse('exp1');">close</i></span>
+					<ul class="circle" style="color:#455A64;">
+						<li>Produce epidemiological analyses of disease outbreaks and other notifiable diseases.</li>
+						<li>Produce information products for the Health Cluster and WHO, including but not limited to 3/4Ws analysis, spatial analysis of health care access for IDPs, bi-weekly WHO internal situation report, bi-weekly IDP situation report, Ethiopia update for WHO AFRO Epidemiological bulletin.</li>
+						<li>Emergency deployments to support surveillance and information management during outbreaks.</li>
+						<li>Provide comprehensive information management trainings in data collection, management and analysis (incl. GIS).</li>
+					</ul>
+					 
+					 
+				</div>
+			</div>
+		<div class="card">
+            <div id="exp2" class="card-content experience">
+                <span class="card-title activator grey-text text-darken-4"><b>Technical Officer Data Management Analytics & Products (GIS Specialist)</b>
+				  <i class="material-icons right" onclick="expand('exp2');">more_vert</i>
+				</span>
+				<div>
+					<span class="txt-left">03/2017 – 02/2018</span>
+					<span class="txt-right">World Health Organization ─ Switzerland</span>
+					
+				</div>
+            </div>
+            <div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><b>Technical Officer Data Management Analytics & Products (GIS Specialist)</b>
+			<i class="material-icons right"onclick="collapse('exp2')">close</i></span>
+                <ul class="circle" style="color:#455A64;">
+					<li>Produce interactive and static mapping products analysing the trends of epidemics and health emergencies (e.g. food insecurity crisis in the Horn of Africa; Plague outbreak in Madagascar; Rohingya refugee crisis in Bangladesh).</li>
+					<li>Maintain the GIS team’s spatial reference database and develop an archiving strategy.</li>
+					<li>Automate data management workflows and data entry efforts using R, Python and VB.</li>
+					<li>Provide remote support to field information management teams in developing and rolling out data collection surveys (e.g. Yemen W4s used by more than 50 partners to track location and capacity of cholera treatment units across the country).</li>
+
+				</ul>
+            </div>
+        </div>
+		<div class="card">
+            <div id="exp3" class="card-content experience">
+                <span class="card-title activator grey-text text-darken-4"><b>Lead Data Manager, Emergency Operations Center</b>
+				  <i class="material-icons right" onclick="expand('exp3');">more_vert</i>
+				</span>
+				<div>
+					<span class="txt-left">12/2014 – 02/2017</span>
+					<span class="txt-right">World Health Organization ─ Switzerland</span>
+					
+				</div>
+            </div>
+            <div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><b>Lead Data Manager, Emergency Operations Center</b>
+			<i class="material-icons right"onclick="collapse('exp3')">close</i></span>
+                <ul class="circle" style="color:#455A64;">
+					<li>Focal point for user management, support, and training for the WHO Emergency management software VSHOC (having ca. 1,000 WHO internal and external users).</li>
+					<li>Support the development and configuration of new features in VSHOC (e.g. the Zika response 4Ws platform used by UN agencies and NGOs; the WHO event grading and emergency focal-point database; and an interactive web-based client for GIS mapping of operational information).</li>
+					<li>Develop off-line templates for VSHOC ensuring data validity of corresponding online forms.</li>
+					<li>Provide GIS support to teams within the WHO Emergency Programme (e.g. WHO Influenza team, Middle-East Respiratory Syndrome Coronavirus (MERS-CoV) Task Force).</li>
+				</ul>
+            </div>
+        </div>
+		<div class="card">
+            <div id="exp4" class="card-content experience">
+                <span class="card-title activator grey-text text-darken-4"><b>Interim Manager, Strategic Health Operations Center</b>
+				  <i class="material-icons right" onclick="expand('exp4');">more_vert</i>
+				</span>
+				<div>
+					<span class="txt-left">10/2016 – 11/2016</span>
+					<span class="txt-right">World Health Organization Regional Office for Africa (AFRO) – Republic of the Congo</span>
+					
+				</div>
+            </div>
+            <div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><b>Interim Manager, Strategic Health Operations Center</b>
+			<i class="material-icons right"onclick="collapse('exp4')">close</i></span>
+                <ul class="circle" style="color:#455A64;">
+					<li>Lead the planning, scheduling, organization and monitoring of telecommunication and meetings.</li>
+					<li>Responsible for Emergency Operations Center (EOC) daily activities, including equipment maintenance.</li>
+					<li>Coordinate and participate the GIS analysis for the Rift-Valley Fever outbreak in Niger.</li>
+					<li>Produce infographics published on WHO AFRO webpage on ongoing outbreaks and health emergencies.</li>
+				</ul>
+            </div>
+        </div>
+		<div class="card">
+            <div id="exp5" class="card-content experience">
+                <span class="card-title activator grey-text text-darken-4"><b>Data Manager in support to the Ebola response in West Africa</b>
+				  <i class="material-icons right" onclick="expand('exp5');">more_vert</i>
+				</span>
+				<div>
+					<span class="txt-left">12/2014 – 02/2017</span>
+					<span class="txt-right">World Health Organization ─ Guinea</span>
+					
+				</div>
+            </div>
+            <div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><b>Data Manager in support to the Ebola response in West Africa</b>
+			<i class="material-icons right"onclick="collapse('exp5')">close</i></span>
+                <ul class="circle" style="color:#455A64;">
+					<li>Oversee and evaluate the pilot phase aiming to decentralize the national Ebola case database in Macenta, Guinea, including training local data mangers in data management and analysis.</li>
+					<li>Establish and maintain effective information management workflows and ensure timely data sharing between partners responsible for alerts, case management, laboratory testing, and contact tracing.</li>
+					<li>Develop an Excel based tool connecting Ebola cases and contacts based on temporal indicators. The application was used in several districts to help map transmission chains.</li>
+				</ul>
+            </div>
+        </div>
+		<div class="card">
+            <div id="exp6" class="card-content experience">
+                <span class="card-title activator grey-text text-darken-4"><b>Consultant in support to the Ebola response in West Africa</b>
+				  <i class="material-icons right" onclick="expand('exp6');">more_vert</i>
+				</span>
+				<div>
+					<span class="txt-left">09/2014 – 11/2014</span>
+					<span class="txt-right">World Health Organization ─ Switzerland</span>
+					
+				</div>
+            </div>
+            <div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><b>Consultant in support to the Ebola response in West Africa</b>
+			<i class="material-icons right"onclick="collapse('exp6')">close</i></span>
+                <ul class="circle" style="color:#455A64;">
+					<li>Responsible for maintenance and accessibility of key EOC information products.</li>
+					<li>Lead the planning, scheduling, organization and monitoring of telecommunication and meetings.</li>
+				</ul>
+            </div>
+        </div>
+		<div class="card">
+            <div id="exp7" class="card-content experience">
+                <span class="card-title activator grey-text text-darken-4"><b>Intern, WHO Strategic Health Operations Center</b>
+				  <i class="material-icons right" onclick="expand('exp7');">more_vert</i>
+				</span>
+				<div>
+					<span class="txt-left">06/2014 – 08/2014</span>
+					<span class="txt-right">World Health Organization ─ Switzerland</span>
+					
+				</div>
+            </div>
+            <div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><b>Intern, WHO Strategic Health Operations Center</b>
+			<i class="material-icons right"onclick="collapse('exp7')">close</i></span>
+                <ul class="circle" style="color:#455A64;">
+					<li>Responsible for the consolidated Ebola West Africa case database, mainly focusing on data input and data cleansing. This database served as the source for the weekly WHO Ebola Situation report and mapping products during the early months of the outbreak.</li>
+				</ul>
+            </div>
+        </div>
+		<div class="card">
+            <div id="exp8" class="card-content experience">
+                <span class="card-title activator grey-text text-darken-4"><b>Thesis Project</b>
+				  <i class="material-icons right" onclick="expand('exp8');">more_vert</i>
+				</span>
+				<div>
+					<span class="txt-left">01/2013 – 06/2014</span>
+					<span class="txt-right">Swiss Tropical and Public Health ─ Switzerland</span>
+					
+				</div>
+            </div>
+            <div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><b>Thesis Project</b>
+			<i class="material-icons right"onclick="collapse('exp8')">close</i></span>
+                <ul class="circle" style="color:#455A64;">
+					<li>-	Development of a VB based teaching tool for public health students and decision makers. This tool illustrates national health priorities for 186 countries based on Global Burden of Disease estimates and cost-effectiveness results from the WHO-CHOICE project.</li>
+				</ul>
+            </div>
+        </div>
+	</div>
+
+   <div class="row">
+        <h5>EDUCATION</h5>
+        <div class="card">
+				<div id="education" class="card-content experience">
+					<span class="card-title activator grey-text text-darken-4"><b>Master of Science: Epidemiology (Graduated Summa Cum Laude)</b>
+					  <i class="material-icons right" onclick="expand('education');">more_vert</i>
+					</span>
+					<div>
+						<span class="txt-left">2014</span>
+						<span class="txt-right">Swiss Tropical and Public Health Institute, Switzerland</span>
+						
+					</div>
+				</div>
+				<div class="card-reveal">
+				<span class="card-title activator grey-text text-darken-4"><b>University degrees</b>
+				<i class="material-icons right"onclick="collapse('education');">close</i></span>
+					<div>
+						<span class="txt-left"><b>Master of Science: Geographic Information Systems</b></span>
+						<span class="txt-right">ongoing</span><br>
+						<span class="txt-left">University of Leeds, United Kingdom (Distance Learning Programme)</span>
+						<br><br>
+					</div>
+					<div>
+						<span class="txt-left"><b>Master of Science: Epidemiology</b></span>
+						<span class="txt-right">2014</span><br>
+						<span class="txt-left">Swiss Tropical and Public Health Institute, Switzerland</span>
+						<br><br>
+					</div>
+					<div>
+						<span class="txt-left"><b>Bachelor of Science: Integrative Biology</b></span>
+						<span class="txt-right">2012</span><br>
+						<span class="txt-left">University of Basel, Switzerland</span>
+						<br><br>
+					 </div>  
+					
+					<span class="card-title"><b>Other trainings and certifications</b></span>  
+					<div>
+						<span class="txt-left"><b>Introduction to Mathematical Models of the Epidemiology & Control of Infectious Diseases</b></span>
+						<span class="txt-right">2017</span><br>
+						<span class="txt-left"> Imperial College London - United Kingdom</span>
+						<br><br>
+					</div>
+					<div>
+						<span class="txt-left"><b>Safe and Secure Approaches in Field Environments (SSAFE)</b></span> 
+						<span class="txt-right">2017</span><br>
+						<span class="txt-left">UN System Staff College ─ Turin, Italy</span>
+						<br><br>
+					</div>
+					<div>
+						<span class="txt-left"><b>Introduction to the Incident Command System </b></span>
+						<span class="txt-right">2016</span><br>
+						<span class="txt-left">Independent study course (E-learning) Federal Emergency Management Agency (FEMA) – USA</span>
+					</div>					 
+				</div>
+			</div>
+    </div>
+	<div class="row">
+        <h5>TEACHING & TRAINING EXPERIENCE</h5>
+        <div class="card">
+				<div id="training" class="card-content experience">
+					<span class="card-title activator grey-text text-darken-4"><b>Introduction to QGIS & Basic Excel</b>
+					  <i class="material-icons right" onclick="expand('training');">more_vert</i>
+					</span>
+					<div>
+						<span class="txt-left">2018</span>
+						<span class="txt-right">Jigjiga, Ethiopoa</span>
+						
+					</div>
+				</div>
+				<div class="card-reveal">
+				<span class="card-title activator grey-text text-darken-4">Teaching & Training Experience
+				<i class="material-icons right"onclick="collapse('training');">close</i></span>
+					<div>
+						<span class="txt-left"><b>Introduction to QGIS & Basic Excel</b></span>
+						<span class="txt-right">2018</span><br>
+						<span class="txt-left">Jigjiga, Ethiopoa</span>
+						<br><br>
+					</div>
+					<div>
+						<span class="txt-left"><b>On-site training workshop in the use of the WHO Emergency Management software </b></span>
+						<span class="txt-right">2017</span><br>
+						<span class="txt-left">Juba, South Sudan; Abuja and Maiduguri, Nigeria</span>
+						<br><br>
+					</div>
+					<div>
+						<span class="txt-left"><b>On-site GIS training workshops for data managers</b></span>
+						<span class="txt-right">2017</span><br>
+						<span class="txt-left">Abuja and Maiduguri, Nigeria</span>
+						<br><br>
+					</div>
+					<div>
+						<span class="txt-left"><b>Bi-weekly interactive training sessions, familiarizing WHO Staff members with the WHO Emergency Management software</b></span>
+						<span class="txt-right">2015-2016</span><br>
+						<span class="txt-left">Geneva, Switzerland</span>
+						<br><br>
+					 </div>  
+					<div>
+						<span class="txt-left"><b>“Introduction to health metrics”</b> (part of the course “Epidemiological Methods”, organized by the Swiss Tropical and Public Health Institute)</span>
+						<span class="txt-right">2014</span><br>
+						<span class="txt-left">Basel, Switzerland</span>
+					
+					</div>
+									 
+				</div>
+			</div>
+    </div>
+	<div class="row">
+        <h5>AWARDS</h5>
+         <div class="card">
+			<div id="awards" class="card-content experience">
+				<span class="card-title activator grey-text text-darken-4"><b>WHO Director-General’s Reward for Excellence in Health Emergencies 2016</b></span>
+				<div>
+					<span class="txt-left">2017</span>
+					<span class="txt-right">Zika Incident Management Team (team award)</span>
+					
+				</div>
+			</div>
+		</div>	
+    </div>
+	<div class="row">
+        <h5>VOLUNTEER WORK</h5>
+        <div class="card">
+			<div id="volunteer" class="card-content experience">
+				<span class="card-title activator grey-text text-darken-4"><b>Co-organizer of the workshop “Become an Emergency Response Specialist with the power of your smartphone!”</b></span>
+
+				<div>
+					<span class="txt-left">2017</span>
+					<span class="txt-right">Expanding your Horizons – Geneva</span>
+					
+				</div>
+			</div>
+		</div>	
+    </div>
+	<div class="row">
+        <h5>PUPLICATIONS</h5>
+        <div class="card">
+			<div id="publication" class="card-content experience" style="padding-bottom:10px">
+				<div>
+					<span class="card-title txt-left"><b>Framework for a Public Health Emergency Operations Centre</b></span>
+					<span class="txt-right">World Health Organization, 2015</span>
+				</div>
+				<div>
+					<span class="card-title txt-left"><b>Ebola virus disease in West Africa - the first 9 months of the epidemic and forward projections.</b></span>
+					<span class="txt-right">N Engl J Med. 2014</span>
+				</div>
+			</div>
+		</div>	
+    </div>
+<div class="row"></div>
+
+
+  
+
+ 
+  <footer class="page-footer">
+    <div class="container">
+      
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+   <script>
+    function collapse(item) {
+		document.getElementById(item).style.height = "75px";
+	}
+	function expand(item) {
+		document.getElementById(item).style.height = "250px";
+	}
+	
+	
+   </script>
+  </body>
+</html>
