@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>Portfolio</title>
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <style>
+         .container {
+         width: 80%
+         }
+         .profile {
+         border-radius: 50%;
+         border: 4px solid #455A64;
+         }
+         nav ul a, nav .brand-logo{
+         color: #CFD8DC;	
+         }
+         .page-footer, .nav-wrapper {
+         background-color: #455A64;
+         }
+         .card-title {
+         text-align: center;
+         }
+         h1 {
+         color: #455A64;
+         }
+         h4 {
+         color: #CFD8DC;
+         }
+         body {
+         background-color: #CFD8DC;
+         }
+         .page-footer {
+         background-color: #455A64;
+         }
+         h6 {
+         color: #CFD8DC;
+         font-size: 14;
+         }
+         .card {
+         margin: 30px;
+         height: 2500px;
+         }
+      </style>
+   </head>
+   <body>
+      <nav>
+         <div class="nav-wrapper">
+            <span style="padding:15px">
+            <img class="profile" src="images/profile.jpg" height="150" width="150" alt="profile picture"> </span>
+            <a href="#!" class="brand-logo title">Caroline Fuhrer </a>
+            <ul class="right hide-on-med-and-down">
+               <li  class="white-text"><a href="index.html" onclick="returnToHomePage()">Return</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div class="row"></div>
+      <div class="container">
+         <div class="section">
+            <!--   Icon Section   -->
+            <div class="row" align="center">
+               <div class="col s8 m5">
+                  <div class="card large blue-grey darken-1">
+                     <div class="card-content white-text">
+                        <span class="card-title activator grey-text white-text">Assessment 1<i class="material-icons right">more_vert</i></span>
+                        <h6 align="center">Agent-Based Model (Sheep and wolves)</h6>
+                        <p>This model is an example of an agent based model. Using python the model simulates a herd
+                           of sheep grazing on a field. During every iteration of the model, each sheep is moving autonomously, eating grass and mating
+                           with suitable mates.
+                           A second set of agents has been introduce in form of wolves. Alike the sheep, wolves are moving 
+                           independently, trying to hunt sheep. <br>
+                           To run this script on your computer download the three files on the bottom of this card. As a users you can change 
+                           the input parameters of the scripts to alter the model. See card details for further information.
+                        </p>
+                     </div>
+                     <div class="card-action" align="center">
+                        <a href="files/model.py" target="_blank">Model</a>
+                        <a href="files/agentframework.py" target="_blank">Agent Framework</a>
+                        <a href="files/in.txt" target="_blank">Data</a>
+                     </div>
+                     <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                           <h6 align="center">Agent-Based Model (Sheep and wolves)</h6>
+                           <i class="material-icons right">close</i>
+                        </span>
+                        <p align="left">
+                           <font color="black">
+                              <b>Sheep:</b> Each sheep is moving across the field randomly, eating grass(the environment). Sheep who eat more
+                              than 100 units become sick and will sicken up. Sick sheep empty their stored environment at the current location. Sheep also
+                              have the ability to share the environment they collected (ate) with another sheep if the sheep is within a user-defined proximity.
+                              Each sheep has been assigned a sex randomly. If a female sheep meets a male sheep (are within 5px radius) it will reproduce. After reproducing the female 
+                              sheep will become unfertile for at least one iteration. After that the female sheep has a 5% chance of becoming fertile again.
+                              <br>To avoid overpopulation, sheep can be eaten by wolves. In addition if the sheep population exceeds 100 individuals a disease
+                              outbreak will occur that has an 80% chance of killing any sheep.
+                              <br><br>
+                              <b>Wolves:</b> Wolves are are trying to hunt the sheep. A like sheep, wolves are moving around independently 
+                              and randomly every iteration of the model. Wolfs who do not manage to catch a sheep after
+                              100 iteration of the model will starve and are removed from the field. Unlike sheep, wolves can not reproduce. 
+                              However, there is a 1% chance of a new wolf appearing.
+                              <br><br>
+                              <b>User input parameters</b><br> If the the script is run through the command line, the user has the ability to define the following
+                              parameters:
+                        <ul align="left" >
+                        <li><b>num_of_sheep</b><i> (int)</i>: Number of sheep at the beginning of the model.</li>
+                        <li><b>num_of_wolves</b><i> (int)</i>: Number of sheep at the beginning of the model.</li>
+                        <li><b>num_of_iterations</b><i> (int)</i>: Number of iterations after which the model will be updated.</li>
+                        <li><b>neighbourhood</b><i> (int)</i>: Size of the neighbourhood in which sheep can share grass.</li>
+                        <li><b>max_iterations</b><i> (int)</i>: Maximum number of iterations after which the model will stop.</li>
+                        <ul>
+                        </font></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col s0 m2"> 
+               </div>
+               <div class="col s8 m5">
+                  <div class="card large blue-grey darken-1">
+                     <div class="card-content white-text">
+                        <span class="card-title activator grey-text white-text">Assessment 1<i class="material-icons right">more_vert</i></span>
+                        <h6 align="center">Agent-Based Model (Sheep and wolves)</h6>
+                        <p>This model is an example of an agent based model. Using python the model simulates a herd
+                           of sheep grazing on a field. During every iteration of the model, each sheep is acting autonomously from 
+                           by moving, eating grass, and reproducing if they meet a suitable mate.
+                           A second set of agents has been introduce in form of wolves. A like the sheep, wolves are moving 
+                           independently, trying to hunt sheep. <br><br>
+                           To run this script on your computer download the three files on the bottom of this card. As a users you can change 
+                           the input parameters of the scripts to alter the model. See card details for further information.
+                        </p>
+                     </div>
+                     <div class="card-action" align="center">
+                        <a href="#">Model</a>
+                        <a href="#">Agent Framework</a>
+                        <a href="#">Data</a>
+                     </div>
+                     <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                           <h6 align="center">Agent-Based Model (Sheep and wolves)</h6>
+                           <i class="material-icons right">close</i>
+                        </span>
+                        <p>
+                           <font color="black">
+                              <b>Sheep:</b> Each sheep is moving across the field randomly, eating grass(the environment). Sheep who eat more
+                              than 100 units become sick and will sicken up. Sick sheep empty their stored environment at the current location. Sheep also
+                              have the ability to share the environment they collected (ate) with another sheep if the sheep is within a user-defined proximity.
+                              Each sheep has been assigned a sex randomly. If a female sheep meets a male sheep (are within 5px radius) it will reproduce. After reproducing the female 
+                              sheep will become unfertile for at least one iteration. After that the female sheep has a 5% chance of becoming fertile again.
+                              <br>To avoid overpopulation, sheep can be eaten by wolves. In addition if the sheep population exceeds 100 individuals a disease
+                              outbreak will occur that has an 80% chance of killing any sheep.
+                              <br><br>
+                              <b>Wolves:</b> Wolves are are trying to hunt the sheep. A like sheep, wolves are moving around independently 
+                              and randomly every iteration of the model. Wolfs who do not manage to catch a sheep after
+                              100 iteration of the model will starve and are removed from the field. Unlike sheep, wolves can not reproduce. 
+                              However, there is a 1% chance of a new wolf appearing.
+                              <br><br>
+                              <b>User input parameters</b><br> If the the script is run through the command line, the user has the ability to define the following
+                              parameters:
+                        <ul>
+                        <li><b>num_of_sheep</b><i> (int)</i>: Number of sheep at the beginning of the model.</li>
+                        <li><b>num_of_wolves</b><i> (int)</i>: Number of sheep at the beginning of the model.</li>
+                        <li><b>num_of_iterations</b><i> (int)</i>: Number of iterations after which the model will be updated.</li>
+                        <li><b>neighbourhood</b><i> (int)</i>: Size of the neighbourhood in which sheep can share grass.</li>
+                        <li><b>max_iterations</b><i> (int)</i>: Maximum number of iterations after which the model will stop.</li>
+                        <ul>
+                        </font></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row"></div>
+      <footer class="page-footer">
+         <div class="container">
+            <div class="row">
+            </div>
+         </div>
+         <div class="footer-copyright" align="right">
+            <div class="container">
+               <a class="brown-text text-lighten-3" href="MIT_License.txt">MIT License</a>
+            </div>
+         </div>
+      </footer>
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/init.js"></script>
+   </body>
+</html>

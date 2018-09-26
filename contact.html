@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="description" content="contact form example">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+         action="https://script.google.com/macros/s/AKfycbws84AE0uXG4YNV3fQF_X2Y6PRxIViPhNMaJaYy/exec">
+         <title>Contact Me</title>
+         <style>
+            .profile {
+            border-radius: 50%;
+            border: 4px solid #455A64;
+            }
+            nav .brand-logo {
+            color: #CFD8DC;
+            }
+            body {
+            background-color: #CFD8DC;
+            }
+            .page-footer, .nav-wrapper {
+            background-color: #455A64;
+            }
+            .material-icons{
+            color: #455A64;
+            }
+            h4 {
+            color: #455A64;
+            }
+            .txt-left { float:left; }
+            txt-right { float:right;
+            }
+            .btn {
+            background-color:#455A64;
+            color:#CFD8DC;  
+            }
+            a {
+            padding: 10px;
+            }
+         </style>
+   </head>
+   <body>
+   <nav>
+   <div class="nav-wrapper">
+   <span style="padding:15px">
+   <img class="profile" src="images/profile.jpg" height="150" width="150" alt="profile picture"> </span>
+   <a href="#!" class="brand-logo title">Caroline Fuhrer </a>
+   </div>
+   </nav>
+   <div class="container">
+   <div class="section">
+   <div class="row"></div>
+   <div class="row"></div>
+   <div class="row"> 
+   <a class="waves-effect waves-light btn" onclick="returnToHomePage()" style="float:right"><i class="material-icons left"></i>Return</a>
+   <h4 class ="txt-left">Contact Form</h4>
+   </div>
+   <div class="row">
+   <form class="col s12">
+   <div class="row">
+   <div class="input-field col s6">
+   <i class="material-icons prefix">account_circle</i>
+   <input id="first_name"  name="firstname"type="text" class="validate">
+   <label for="first_name">Last Name</label>
+   </div>
+   <div class="input-field col s6">
+   <i class="material-icons prefix"></i>
+   <input id="last_name"  name="lastname" type="text" class="validate">
+   <label for="last_name">Last Name</label>
+   </div>
+   </div>
+   <div class="row">
+   <div class="input-field col s6">
+   <i class="material-icons prefix">email</i>
+   <input id="email"  name="email" type="email" class="validate">
+   <label for="email">Email</label>
+   </div>
+   <div class="input-field col s6">
+   <i class="material-icons prefix">phone</i>
+   <input id="icon_telephone"  name="phone" type="tel" class="validate">
+   <label for="icon_telephone">Telephone</label>
+   </div>
+   </div>
+   <div class="row">
+   <div class="input-field col s12">
+   <i class="material-icons prefix"></i>
+   <textarea id="textarea1"  name="message" class="materialize-textarea"></textarea>
+   <label for="textarea1">Message</label>
+   </div>
+   </div>
+   <button class="button-success  waves-effect waves-light btn">
+   <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+   </form>
+   </div>
+   <!-- Customize the Thank you Message People See when they submit the form: -->
+   <div class="thankyou_message" style="display:none;">
+   <h4><em>Thanks</em> for contacting us! We will get back to you soon!</h4>
+   </div>
+   <div class="row"></div>
+   <div class="row"></div>
+   <div class="row"></div>
+   </div>
+   </div>
+   <footer class="page-footer">
+   <div class="container">
+   </div>
+   <div class="footer-copyright"  align="right">
+   <div class="container">
+   <p><span><a class="brown-text text-lighten-3" href="files/MIT_License.txt">MIT License</a>
+   <a class="brown-text text-lighten-3" href="files/GNU_License.txt">GPL-2.0 License</a>
+   <a class="brown-text text-lighten-3" href="https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server">Source</a>
+   </p>
+   </div>
+   </div>
+   </footer>
+   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="js/materialize.js"></script>
+   <script src="js/init.js"></script>
+   <script data-	="false" type="text/javascript"
+      src="js/form-submission-handler.js"></script>
+   <script>function returnToHomePage() {
+      window.history.back();
+      }
+   </script>
+   </body>
+</html>
