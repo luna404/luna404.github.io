@@ -121,31 +121,30 @@
                <div class="col s12 m5">
                   <div class="card large blue-grey darken-1">
                      <div class="card-content white-text">
-                        <span class="card-title activator grey-text white-text">Placeholder<i class="material-icons right">more_vert</i></span>
-                        <h6 align="center">...</h6>
-                        <p>...
+                        <span class="card-title activator grey-text white-text">Assessment 2<i class="material-icons right">more_vert</i></span>
+                        <h6 align="center">Black death simulation</h6>
+                        <p><br>This programs calculates the historical number of weekly deaths attributable to the plague across 16 square parishes for the 1665 plague outbreak in London. 
                         </p>
                      </div>
                      <div class="card-action" align="center">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                        <a href="#"></a>
+                        <a href="files/Black Death Simulation.ipynb" target="_blank">Black Death Simulation</a>
                      </div>
                      <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">
-                           <h6 align="center">Placeholder)</h6>
+                           <h6 align="center">Black Death Simulation</h6>
                            <i class="material-icons right">close</i>
                         </span>
                         <p>
                            <font color="black">
-                              ...
-                        <!--<ul>
-                        <li><b>num_of_sheep</b><i> (int)</i>: Number of sheep at the beginning of the model.</li>
-                        <li><b>num_of_wolves</b><i> (int)</i>: Number of sheep at the beginning of the model.</li>
-                        <li><b>num_of_iterations</b><i> (int)</i>: Number of iterations after which the model will be updated.</li>
-                        <li><b>neighbourhood</b><i> (int)</i>: Size of the neighbourhood in which sheep can share grass.</li>
-                        <li><b>max_iterations</b><i> (int)</i>: Maximum number of iterations after which the model will stop.</li>
-                        <ul> -->
+                        The estimated number of weekly deaths per 100m2 is defined as
+						<br><br><b><i>deaths (d) = (r x rat) x (p x pop)</b></i>, <br> <br> 
+						where rat equals the average number of rats caught per week per 100m2 and pop denotes the average population density per 100m2. 
+						The default values for the parameters r and p were derived from a hypothetical study and are set at 1.3 (p) and 0.8 (r) respectively. 
+						(See <a id="section_ID" href="http://www.geog.leeds.ac.uk/courses/computing/study/core-python-odl/assessment2/death.html">Black death project</a>  for details.) 
+
+                        The project requires two input raster data sets (death.parishes.txt and death.rats). In the absence of the file the program will try to read the files from the <a id="section_ID" href="http://www.geog.leeds.ac.uk/courses/computing/study/core-python-odl/assessment2/death.html">project webpage</a>. In case the files are imported from the web, a copy of the raster data is saved as a text files. Before displaying and exporting the raster maps on screen, the progam will adjust the size of the output maps to only include the 16 square parishes. 
+						The expected number of plague deaths is calculated using the above formula. The resulting raster map is is displayed individually and together with the input raster maps. In addition, the program exports the the raster data as text file and calculates the cumulative weekly number of expected plague deaths. Lastly, the program will display an interactive map allowing users to alter the r and p parameters to increase or decrease plague related mortality. Optionally, the resulting map and raster data can be exported as well.
+						The code is split in three parts. Part I adjusts the general settings of the program and imports required packages. Part II is defining the required function and classes while Part III is executing project and displaying the various maps.
                         </font></p>
                      </div>
                   </div>
