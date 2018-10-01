@@ -14,7 +14,7 @@ have the ability to share the environment they collected (ate) with another shee
 Each sheep has been assigned a sex randomly. If a female sheep meets a male sheep (are within 5px radius) it will reproduce. After reproducing the female 
 sheep will become unfertile for at least one iteration. After that the female sheep has a 5% chance of becoming fertile again.
 To avoid overpopulation, sheep can be eaten by wolves. In addition if the sheep population exceeds 100 individuals a disease
-outbreak will occur that has an 80% chance of killing any sheep.
+outbreak will. Each sheep has a 20% chance of surviving the disease outbreak. 
 
 Class Wolf: Defines the action exclusively concerning agents of the wolf class. Wolves are are trying to hunt the sheep. A like sheep, wolves are moving around independently 
 and randomly every iteration of the model. Wolfs who do not manage to catch a sheep after
@@ -61,7 +61,30 @@ class Sheep:
         self.sex = 'm' if random.random() <0.5 else 'f'
         self.reproduce = True if self.sex == 'f' else False
 
-        
+    """ Removed as code does not work properly with the animation.
+	
+		If implemented, sheep are re-initiated every iteration resulting in the sheep
+		jumping around rather than moving. 
+	
+		@property
+		def y(self):
+			return self._y
+
+		@property
+		def x(self):
+			return self._x
+
+		@y.setter
+		def y(self, val):
+			self._y = random.randint(0,99)
+			
+		@x.setter
+		def x(self, val):
+			self._x = random.randint(0,99)   
+	
+	
+    """
+    
     def __str__(self):
         """Override __str__ to print location.
         
@@ -119,7 +142,7 @@ class Sheep:
         """Sheep eat the environment.
         
         Defines the amount of environment consumed by a sheep. By default a sheep
-        eats 10 unit form the environment at the current location of the sheep.
+        eats 10 unit from the environment at the current location of the sheep.
         If the remaining environment is less than 10 units, the sheep will eat the
         remaining environment.
         
@@ -269,9 +292,9 @@ class Wolf:
             
             
 class SheepPopControl():
-    """Intorduces control mechanisms to prevent exponential growth of sheep population."""
+    """Introduces control mechanisms to prevent exponential growth of sheep population."""
     
-    def diease_outbreak(self,herd):
+    def disease_outbreak(self,herd):
         """Prevent the sheep from growing exponentially by introducing diseases.
         
         If the sheep population exceeds 100 a disease outbreak will occur to diminish the 
@@ -283,7 +306,7 @@ class SheepPopControl():
         """
         
         if len(herd)>100:
-            """If herd size exeeds 100, introduce disease."""
+            """If herd size exceeds 100, introduce disease."""
             for i in herd:
                 """"Loop through each sheep in the herd."""
                 if random.random() <0.8:
@@ -291,7 +314,7 @@ class SheepPopControl():
                     i.alive = False
                     """Change alive status to false for dying sheep."""
              
-    def new_wolfs(self):
+    def new_wolves(self):
         """Introduce new wolf.
         
         Generate a random number to decide if a new wolf is being introduced.

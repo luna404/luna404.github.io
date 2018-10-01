@@ -54,26 +54,26 @@ for i in sys.argv:
         
     """ 
     if i in ['Help','help','h']:
-        """If user requests help print input requirements and exist the script."""
-        print('The porgram requires four arguments\nnumber of agents (int)\nnumber of wolfs (int)\n' +
-          'number of iterations (int)\n maximu number of iterations (int)\nsize of neighbourhoood (int)')
+        """If user requests help print input requirements and exists the script."""
+        print('The program requires four arguments\nnumber of agents (int)\nnumber of wolfs (int)\n' +
+          'number of iterations (int)\n maximum number of iterations (int)\nsize of neighbourhoood (int)')
         sys.exit()
     else:
         """ Define model parameters based on user input value.
         
             Assign default values for missing input parameters.            
-            Through error message if user submits variable type other than integer.
+            Throw error message if user submits variable type other than integer.
         """
         try:
             num_of_sheep = int(sys.argv[1]) if len(sys.argv)>1 else 10
             num_of_wolves = int(sys.argv[2]) if len(sys.argv)>2 else 2
             num_of_iterations = int(sys.argv[3]) if len(sys.argv)>3 else 10
             neighbourhood = int(sys.argv[5]) if len(sys.argv)>4 else 20 
-            max_iterations = int(sys.argv[4]) if len(sys.argv)>5 else 100
+            max_iterations = int(sys.argv[4]) if len(sys.argv)>5 else 1000
             
         except ValueError:
-            print('The porgram requires four arguments\nnumber of sheep (int)\nnumber of wolves (int)\n' +
-            'number of iterations (int)\n maximu number of iterations (int)\nsize of neighbourhoood (int)')
+            print('The program requires four arguments\nnumber of sheep (int)\nnumber of wolves (int)\n' +
+            'number of iterations (int)\n maximum number of iterations (int)\nsize of neighbourhoood (int)')
 
 
 with open("in.txt", "r", newline='\n') as file: 
@@ -145,7 +145,7 @@ def update(frame_number):
                 wolves[j].hunt_sheep()
                 """Wolf moves to hunt sheep."""
                 wolves[j].starve()
-                """If wolve is not able to catch sheep, it will starve"""
+                """If wolf is not able to catch sheep, it will starve"""
                
                 if wolves[j].alive == False:
                     """ remove dead wolves """
@@ -170,11 +170,11 @@ def update(frame_number):
                         """If female sheep try to mate."""
                         herd.append(af.Sheep(environment,herd))
                                             
-            # contorl sheep population 
-            if ctrl.new_wolfs(): wolves.append(af.Wolf(wolves))
+            # control sheep population 
+            if ctrl.new_wolves(): wolves.append(af.Wolf(wolves))
             """There is a 1% chance a new wolf is introduced."""
-            ctrl.diease_outbreak(herd)
-            """ If sheep herd exceeds 100, a disease outbreak occurs and kills 80% of sheep."""
+            ctrl.disease_outbreak(herd)
+            """ If sheep herd exceeds 100, a disease outbreak occurs. Sheep have a 20% chance of surviving the disease."""
         except IndexError:
             pass 
 
@@ -211,10 +211,10 @@ def update(frame_number):
 def gen_function(b = [0]):
     """Define stopping point for the model.
     
-    The animation will stop when either of the three criteria are true:
+    The animation will stop when any of the three criteria are true:
     1. Sheep have eaten all the grass (Environment is zero).
     2. All sheep have died.
-    3. The maximum number of iteration has been reached. 
+    3. The maximum number of iterations has been reached. 
     
     """
     a = 0
@@ -237,13 +237,7 @@ animation = anm.FuncAnimation(fig, update, frames=gen_function, repeat=False)
 plt.show()
 """Display the plot."""
 
-plt.savefig('ABM_Sheep_Wolfpng')
-"""Save the plot."""
 
-
-for i in range(num_of_sheep):
-    """ print start and end location of each agent """
-    print('start:' + herd[i].org_location + ' end: ' + str(herd[i].y) +'/' + str(herd[i].x))
 
 #: Write out the environment as a file.
 with open('environment_out.txt', "w") as f1,open('environment_row_sum.txt', "a")  as f2: 
@@ -260,5 +254,13 @@ with open('environment_out.txt', "w") as f1,open('environment_row_sum.txt', "a")
         """ write sum of each line to file."""
 f1.close(), f2.close()
 """Close both files."""
+
+try:
+	for i in range(num_of_sheep):
+		""" print start and end location of each agent """
+		print('start:' + herd[i].org_location + ' end: ' + str(herd[i].y) +'/' + str(herd[i].x))
+except:
+	pass
+
 
 print('End of script.')
